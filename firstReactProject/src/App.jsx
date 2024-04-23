@@ -17,6 +17,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <CoolComponent></CoolComponent>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -29,6 +30,14 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+  )
+}
+
+function CoolComponent(){
+  return (
+    <div onClick={() => console.log("Yahaha you found me!")}>
+      <h1>This is a cool component!</h1>
+    </div>
   )
 }
 

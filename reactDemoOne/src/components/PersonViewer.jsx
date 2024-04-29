@@ -13,14 +13,16 @@ export default function PersonViewer({name, age}) {
     
   return (
     <>
-        {users.map((user, index) => (
+        {users.map((user) => (
             <>
+            <div key = {user.email}>
                 <ShowName name={user.name} />
                 <div>{user.email}</div>
                 <div>{user.username}</div>
                 <div>{user.phone}</div>
                 <div>{ageState}</div>
                 <button onClick={() => setAgeState(ageState +1 )}>Get Older!</button>
+                </div>
             </>
         ))}
     </>

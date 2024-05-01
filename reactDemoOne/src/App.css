@@ -4,3 +4,22 @@
   padding: 2rem;
   text-align: center;
 }
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border: solid white 1px;;
+}
+
+tr{
+  border: solid white 1px;
+}
+
+th, td{
+  border: solid white 1px;
+  padding: 0.5rem;
+}
+
+th{
+  background-color: #656565;
+}

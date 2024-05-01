@@ -1,0 +1,130 @@
+{
+  "books": [
+    {
+      "id": "102",
+      "title": "dolorem qui ipsa neque quia",
+      "author": "Kyler McGlynn",
+      "rating": 0.15,
+      "year_published": 1964
+    },
+    {
+      "id": "103",
+      "title": "quas quia et dolorum",
+      "author": "Adonis Senger",
+      "rating": 0.15,
+      "year_published": 1991
+    },
+    {
+      "id": "104",
+      "title": "non molestiae dolores earum",
+      "author": "Donnie Yundt",
+      "rating": 1.6,
+      "year_published": 1784
+    },
+    {
+      "id": "105",
+      "title": "molestiae alias",
+      "author": "Devyn Hauck",
+      "rating": 2.9,
+      "year_published": 1989
+    },
+    {
+      "id": "106",
+      "title": "tempore occaecati nihil facilis ad",
+      "author": "Alexie Schiller",
+      "rating": 0.1,
+      "year_published": 2002
+    },
+    {
+      "id": "107",
+      "title": "rem occaecati qui harum",
+      "author": "Elena Walter",
+      "rating": 1.65,
+      "year_published": 1733
+    },
+    {
+      "id": "108",
+      "title": "maxime unde autem et",
+      "author": "Reagan Kassulke",
+      "rating": 1.15,
+      "year_published": 1790
+    },
+    {
+      "id": "109",
+      "title": "sapiente rem",
+      "author": "Fermin Brown",
+      "rating": 2.5,
+      "year_published": 1931
+    },
+    {
+      "id": "110",
+      "title": "doloribus",
+      "author": "Eddie Beier",
+      "rating": 4.05,
+      "year_published": 1951
+    },
+    {
+      "id": "111",
+      "title": "distinctio molestias",
+      "author": "Jamel Luettgen",
+      "rating": 0.8,
+      "year_published": 1909
+    },
+    {
+      "id": "112",
+      "title": "nemo rerum eaque",
+      "author": "Mathias Schaden",
+      "rating": 1.4,
+      "year_published": 1813
+    },
+    {
+      "id": "113",
+      "title": "earum id rem",
+      "author": "Felicity Goldner",
+      "rating": 2.8,
+      "year_published": 1791
+    },
+    {
+      "id": "114",
+      "title": "beatae numquam neque",
+      "author": "Elinor Schroeder",
+      "rating": 3.05,
+      "year_published": 1844
+    },
+    {
+      "id": "115",
+      "title": "sit nobis quibusdam ratione numquam",
+      "author": "Kathryn Heller",
+      "rating": 4.2,
+      "year_published": 1733
+    },
+    {
+      "id": "defd",
+      "title": "Cool adventures of your mother",
+      "author": "Dong",
+      "rating": "3.2",
+      "year_published": "2012"
+    },
+    {
+      "id": "1a2d",
+      "title": "The good story about your father",
+      "author": "Gunna",
+      "rating": "2.2",
+      "year_published": "2011"
+    },
+    {
+      "id": "98bd",
+      "title": "Johnnys seje ferie",
+      "author": "Johnny",
+      "rating": "0.1",
+      "year_published": "2023"
+    },
+    {
+      "id": "5794",
+      "title": "Donnys kugle",
+      "author": "Donny",
+      "rating": "5.0",
+      "year_published": "2007"
+    }
+  ]
+}

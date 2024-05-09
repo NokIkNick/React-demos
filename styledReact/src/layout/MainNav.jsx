@@ -1,28 +1,52 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 
-/*CSS HERINDE*/
+const NavigationBar = styled.div`
+  background-color: var(--color-sky-200);
+`
+const NavList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+`
 
-export const MainNav = () => {
-    return(
+const ListItem = styled.li`
+  
+`
+
+export const MainNav = ({currentUser}) => {
+  
+  useEffect(() => {
+    console.log(currentUser);
+  }, []) 
+  
+  
+  
+  return(
       <>
-        <nav>
-          <li>
-            <NavLink to="home">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="about">About</NavLink> 
-          </li>
-          <li>
-            <NavLink to="contact">Contact</NavLink>
-          </li>
-          <li>
-            <NavLink to="posts">Posts</NavLink>
-          </li>
-          <li>
-            <NavLink to="login">Login</NavLink>
-          </li>    
-        </nav>
+        <NavigationBar>
+          <NavList>
+            <ListItem>
+              <NavLink to="home">Home</NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink to="about">About</NavLink> 
+            </ListItem>
+            <ListItem>
+              <NavLink to="contact">Contact</NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink to="posts">Posts</NavLink>
+            </ListItem>
+            {currentUser && <ListItem>{currentUser.username}</ListItem>}
+            <ListItem>
+              <NavLink to="login">Login</NavLink>
+            </ListItem>
+          </NavList>    
+        </NavigationBar>
       </>
     );
   }

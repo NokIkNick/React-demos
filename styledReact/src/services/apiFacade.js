@@ -4,7 +4,7 @@ import {BASE_URL} from "../utils/globalVariables.js"
 export const login = async (username, password, callback) => {
     try{
         const response = await fetch(`${BASE_URL}/auth/login`, {
-            method: 'POST',
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -15,7 +15,6 @@ export const login = async (username, password, callback) => {
         });
 
         const data = await response.json();
-        console.log(data);
         callback(data);
     }catch(error){
         console.log(error);
@@ -26,7 +25,7 @@ export const login = async (username, password, callback) => {
 export const register = async (username, password) => {
     try{
         const response = await fetch(`${BASE_URL}/auth/register`, {
-            method: 'POST',
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },

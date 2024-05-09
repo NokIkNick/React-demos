@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { login } from "../services/apiFacade.js";
 
-export const Login = (setCurrentUser) => {
+export const Login = ({setCurrentUser, currentUser}) => {
     const [user, setUser] = useState({username: "", password: ""});
     const navigate = useNavigate();
 
@@ -18,12 +18,17 @@ export const Login = (setCurrentUser) => {
 
     const attemptLogin = async () => {
         try {
-            await login(user.username, user.password, () => setCurrentUser());
+            await login(user.username, user.password, (data) => setCurrentUser(data));
+            setUser({username: "", password: ""})
         }catch(err){
             console.log(err);
         }
     }
     
+    useEffect(() => {
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    }, [currentUser])
+
     return (
     <>
         <form onSubmit={handleSubmit}>

@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom"
 import { Header } from "./Header"
 
 
-export const AppLayout = () => {
+export const AppLayout = ({currentUser}) => {
     return (
       <>
-        <Header />
+        <Header currentUser={currentUser}/>
         <Outlet />
       </>
     )

@@ -11,7 +11,7 @@ import { Login } from "./page/Login"
 
 
 function App() {
-  const [currentUser, setCurrentUser] = useState({token: "", username: ""});
+  const [currentUser, setCurrentUser] = useState({token: null, username: null});
 
   const Posts = () => {
     return (
@@ -40,7 +40,7 @@ function App() {
       <div>
         <BrowserRouter>
           <Routes>
-          <Route element={<AppLayout/>}>
+          <Route element={<AppLayout currentUser={currentUser}/>}>
             <Route index element={<Navigate to="home"/>}/>
             <Route path="home" element={<Home />}/>
             <Route path="/" element={<Home />}/>
@@ -50,7 +50,7 @@ function App() {
               <Route index element={<h1>New Posts</h1>}/>
               <Route path=":postId" element={<Post/>} />
             </Route>
-            <Route path="/login" element={<Login setCurrentUser={setCurrentUser}/>}/>
+            <Route path="/login" element={<Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="*" element={<PageNotFound/>}/>
             </Route>

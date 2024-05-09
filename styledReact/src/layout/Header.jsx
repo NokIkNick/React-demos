@@ -1,9 +1,9 @@
 import { MainNav } from './MainNav'
 
-export const Header = () => {
+export const Header = ({currentUser}) => {
     return (
       <>
-        <MainNav/>
+        <MainNav currentUser={currentUser}/>
       </>
     )
   }

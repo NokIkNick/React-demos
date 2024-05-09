@@ -1,14 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import { BrowserRouter, NavLink, Navigate, Outlet, Route, Routes, useNavigate, useParams } from "react-router-dom"
 import styled from "styled-components"
 import { AppLayout } from "./layout/AppLayout"
 import { Home } from "./page/Home"
 import { PageNotFound } from "./page/PageNotFound"
 import { BASE_URL } from "./utils/globalVariables"
+import { Register } from "./page/Register"
+import { Login } from "./page/Login"
 
 
 
 function App() {
+  const [currentUser, setCurrentUser] = useState({token: "", username: ""});
 
   const Posts = () => {
     return (
@@ -47,6 +50,8 @@ function App() {
               <Route index element={<h1>New Posts</h1>}/>
               <Route path=":postId" element={<Post/>} />
             </Route>
+            <Route path="/login" element={<Login setCurrentUser={setCurrentUser}/>}/>
+            <Route path="/register" element={<Register/>}/>
             <Route path="*" element={<PageNotFound/>}/>
             </Route>
           </Routes>

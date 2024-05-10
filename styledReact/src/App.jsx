@@ -52,6 +52,10 @@ function App() {
             </Route>
             <Route path="/login" element={<Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>}/>
             <Route path="/register" element={<Register/>}/>
+            <Route path="/logout" element={() => {
+              setCurrentUser({"token": null, "username": null});
+              localStorage.clear();
+            }}/> 
             <Route path="*" element={<PageNotFound/>}/>
             </Route>
           </Routes>

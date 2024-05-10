@@ -11,6 +11,7 @@ const NavList = styled.ul`
   flex-direction: row;
   list-style-type: none;
   justify-content: space-evenly;
+  font-size: 1.5rem;
 `
 
 const ListItem = styled.li`
@@ -43,7 +44,7 @@ export const MainNav = ({currentUser}) => {
             </ListItem>
             {currentUser && <ListItem>{currentUser.username}</ListItem>}
             <ListItem>
-              <NavLink to="login">Login</NavLink>
+              {currentUser.username !== null ? <NavLink to="logout">Logout</NavLink> : <NavLink to="login">Login</NavLink>}
             </ListItem>
           </NavList>    
         </NavigationBar>

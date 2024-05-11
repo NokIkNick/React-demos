@@ -43,6 +43,7 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         font-family: 'Freeman', 'sans-serif';
+        background-color: var(--color-sky-100);
     }
 
 `;
